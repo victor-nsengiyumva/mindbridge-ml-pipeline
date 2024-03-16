@@ -1,6 +1,8 @@
 pandas
 numpy
 seaborn
-scikit-learn
-dill
 matplotlib
+scikit-learn
+Flask
+
+#-e .
