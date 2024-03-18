@@ -2,8 +2,7 @@ pandas
 numpy
 seaborn
 matplotlib
-scikit-learn
-pickle
+scikit-learn==1.4.1.post1
 Flask
 dill
 #-e .
