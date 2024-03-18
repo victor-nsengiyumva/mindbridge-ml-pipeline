@@ -93,13 +93,13 @@ class DataTransformation:
         logging.info('Starting Transformation')
         
         for col in yes_no_cols:
-            features[col] = features[col].map({'YES': 1, 'NO': 0}).astype(str)
+            features[col] = features[col].map({'YES': 1, 'NO': 0}).astype(int)
 
         for column in frequency_columns:
-            features[column] = features[column].map({'Seldom': 0, 'Sometimes': 1, 'Usually': 2, 'Most-Often': 3}).astype(str)
+            features[column] = features[column].map({'Seldom': 0, 'Sometimes': 1, 'Usually': 2, 'Most-Often': 3}).astype(int)
 
         for column in from_columns:
-            features[column] = features[column].astype(str).str.extract('(\d)')
+            features[column] = features[column].str.extract('(\d)').astype(int)
             features[column] = pd.to_numeric(features[column])
 
         logging.info('Finish Transformation')
