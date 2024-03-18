@@ -40,8 +40,6 @@ def predict_datapoint():
     )
 
     pred_df= data.get_data_as_df()
-
-    print(pred_df)
     
     pred_pipeline = Pipeline()
     return jsonify({"diagnosis": classes[pred_pipeline.predict(pred_df)[0]]})

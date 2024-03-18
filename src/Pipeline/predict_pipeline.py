@@ -13,11 +13,7 @@ class Pipeline:
         try:
             transform = DataTransformation()
             model_path=os.path.join("artifacts","model.pkl")
-            # preprocessor_path=os.path.join('artifacts','preprocessor.pkl')
-            print("Before Loading")
             model=load_obj(file_path=model_path)
-            # preprocessor=load_obj(file_path=preprocessor_path)
-            print("After Loading")
             data_scaled=transform.manual_transformation(features)
             preds=model.predict(data_scaled)
             return preds
