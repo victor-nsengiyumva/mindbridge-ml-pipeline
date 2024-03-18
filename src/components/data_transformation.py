@@ -103,5 +103,5 @@ class DataTransformation:
             features[column] = pd.to_numeric(features[column])
 
         logging.info('Finish Transformation')
-
+        print(features)
         return features
