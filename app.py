@@ -4,6 +4,7 @@ import os
 import json
 import numpy as np
 import pandas as pd
+from flask_cors import CORS
 from src.exception import CustomException
 
 from sklearn.preprocessing import StandardScaler
@@ -12,7 +13,7 @@ from src.Pipeline.predict_pipeline import CustomData
 from src.Pipeline.predict_pipeline import Pipeline
 
 application = Flask(__name__)
-
+CORS(application)
 app=application
 
 #Routes
